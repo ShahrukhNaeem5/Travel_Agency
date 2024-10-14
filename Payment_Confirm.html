@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking, Payment & Confirmation</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+    <!-- Modernizer -->
+    <script src="js/modernizer.js"></script>
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Add your CSS styles here */
+        .hidden {
+            display: none;
+        }
+
+
+
+
+        .bus-icon {
+            width: 40px;
+            height: 40px;
+            color: rgb(255, 153, 0);
+            border-radius: 50%;
+            border: solid 1px black;
+            background-color: rgb(243, 243, 243);
+            /* Red color for the bus icon, you can change it as needed */
+            padding-right: 12px;
+            position: absolute;
+            transition: left 0.5s;
+            /* Add a left transition effect */
+            /* transition: transform 0.3s; */
+
+        }
+
+        .line {
+            width: 100%;
+            height: 6px;
+            background-color: rgb(255, 153, 0);
+            /* Black color for the line, you can change it as needed */
+            position: absolute;
+            top: 40px;
+            /* Adjust the top position as needed */
+
+        }
+
+        .bus-icon i {
+            position: relative;
+            top: 23%;
+            left: 25%;
+            font-size: 22px;
+        }
+
+        #tickIcon {
+            width: 40px;
+            height: 40px;
+            color: #008000;
+            /* Green color for the tick icon, you can change it as needed */
+            position: absolute;
+            left: 22%;
+            /* Initial position same as bus icon */
+            top: 20%;
+            padding-left: 3px;
+
+        }
+
+        #tickIcon2 {
+            width: 40px;
+            height: 40px;
+            color: #008000;
+            position: absolute;
+            left: 49%;
+            top: 20%;
+            padding-right: 14px;
+
+        }
+
+        .mobile-arrow .fa {
+         display: none;
+         }
+
+        @media (max-width:576px) {
+
+              .icon-to-move {
+             display: none;
+            } 
+            .mobile-arrow{
+               
+                display: flex;
+                justify-content: space-between
+            }
+            .mobile-arrow .fa {
+                display: flex;
+                font-size: 42px;
+                color: rgb(255, 153, 0);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid bus-travel-show" style="position: fixed; background-color: aliceblue;">
+        <div class="container mobile-arrow">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+        </div>
+
+        <div class="icon-to-move">
+            <div class="line"></div>
+            <div id="tickIcon" class="bus-icon  hidden">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+            </div>
+            <div id="busIcon" class="bus-icon text-center" style="top: 25px; left: 22%;">
+                <i class="fa fa-bus" aria-hidden="true"></i></li>
+            </div>
+            <div class="container">
+                <br>
+                <div class="container-fluid all-heading">
+                    <div class="row text-center ">
+                        <div class="col col-md-4 col-sm-4">
+                            <h1>Booking</h1>
+
+                        </div>
+                        <div class="col col-md-4 col-sm-4">
+                            <div id="tickIcon2" class="bus-icon text-center hidden">
+                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            </div>
+                            <h1>Payment</h1>
+
+                        </div>
+                        <div class="col col-md-4 col-sm-4">
+                            <h1>Confirmation</h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Booking Form -->
+    <div id="bookingForm">
+        <div class="container-fluid back-box ">
+            <div class="container search-box margin-box">
+                <div class="row">
+                    <div class="col-md-9 search-data">
+                        <h5>Faisal Movers</h5>
+                        <h3>07:00 PM - 11:30AM</h3>
+                        <p>Karachi &nbsp; <span>
+                                <i class="fa fa-arrow-right" aria-hidden="true">
+
+                                </i></li>
+                            </span> &nbsp; To &nbsp;<span>
+                                <i class="fa fa-arrow-right" aria-hidden="true">
+
+                                </i></li>
+                            </span> &nbsp; Lahore</p>
+                        <p class="search-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam
+                            esse,
+                            odit tenetur porro
+                            tempora orem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam esse, odit
+                            tenetur porro
+                            tempora
+                            quidem culpa quod atque nobis.</p>
+                        <p>
+                            <span>
+                                <i class="fa fa-headphones" aria-hidden="true">
+
+                                </i></li>
+                            </span>&nbsp;&nbsp;
+                            <span> <i class="fa fa-television" aria-hidden="true">
+
+                                </i></li>
+                            </span>&nbsp;&nbsp;
+                            <span class="luxury-search">Luxury</span>
+                        </p>
+
+                        <p>Selected Seat(s) &nbsp;&nbsp; <span class="seat_no">A-11</span> </p>
+                    </div>
+                    <div class="col-md-3 ">
+                    </div>
+                </div>
+            </div>
+
+            <!-- --------------------- -->
+
+            <div class="container">
+                <h1 class="payment-heading">Contact Details</h1>
+            </div>
+            <form action="">
+                <div class="container contact-box-payment">
+                    <div class="row contact-payment">
+                        <div class="col-md-6 ">
+
+                            <label for="">Mobile Number</label><br>
+                            <select id="countryCode">
+                                <option value="+92">+92</option>
+                                <option value="+93">+93</option>
+                                <option value="+94">+94</option>
+                                <!-- Add more options for other countries as needed -->
+                            </select>
+
+                            <!-- Phone Number Input Field -->
+                            <input class="phone-input" type="text" id="phoneNumber"
+                                placeholder="Enter your phone number">
+                            <br><span class="e-g">e.g +923012454841</span>
+
+                            <!--  <button id="submitButton">Submit</button> -->
+
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Email (Optional)</label><br>
+                            <input class="input-email" type="email" name="" id=""
+                                placeholder="Enter Your Email Here"><br>
+                            <span class="e-g">e.g name@gmail.com</span>
+
+                        </div>
+                    </div>
+                    <div class="checkbox-tick">
+                        <input type="checkbox" name="" id=""> I'have agree all your terms & conditions
+                    </div>
+                </div>
+
+
+
+                <!--  -->
+                <div class="container">
+                    <h1 class="payment-heading">Traveller Details</h1>
+                </div>
+                <div class="container contact-payment-info">
+                    <div class="row contact-payment">
+                        <div class="col-md-6">
+                            <label for="">First Name</label><br>
+                            <input type="text" name="" id="" placeholder="Enter Traveller's First Name">
+
+
+                        </div>
+                        <div class="col-md-6 ">
+                            <label for="">Last Name</label><br>
+                            <input type="text" name="" id="" placeholder="Enter Traveller's Last Name">
+                        </div>
+                        <div class="col-md-6 pt-4">
+                            <label for="">Date Of Birth</label><br>
+                            <input type="date" name="" id="">
+                        </div>
+                        <div class="col-md-6 pt-4">
+                            <label for="">Identity Number</label><br>
+                            <input type="number" name="" id="" placeholder="Enter 13 digit code">
+                        </div>
+                    </div>
+
+                    <button type="submit" id="paymentButton" class="payment-btn">Submit</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <br><br><br><br><br><br><br>
+    <!-- Payment Form (Initially Hidden) -->
+    <div id="paymentForm" class="hidden ">
+        <form action="" method="post">
+            <div class="container">
+                <table class="table table-striped">
+                    <tr class="margin-box">
+                        <td>
+                            <h6>Traveller Name</h6>
+                        </td>
+                        <td>Shafiq Ahmed</td>
+                    </tr>
+                    <tr>
+                        <td>Traveller Age</td>
+                        <td>22 Years</td>
+                    </tr>
+                </table>
+
+            </div>
+
+            <div class="container price-summary">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Price Summary</h4>
+                    </div>
+
+                    <div class="col-md-6 pay-price">
+                        <p>Daewoo</p>
+                    </div>
+                    <div class="col-md-6 pay-price">
+                        <p>PKR 7,500</p>
+                    </div>
+                    <hr>
+                    <div class="col-md-6 pay-main-price">
+                        <h6>Price You Pay</h6>
+                    </div>
+                    <div class="col-md-6 pay-main-price">
+                        <h5>PKR 7,500</h5>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="payment-btn">Pay Now</button> <br><br>
+                        <!--  <button id="paymentBackButton">Go Back to Booking</button> -->
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+        <button class="payment-btn-back" onclick="goBackToBooking()">Go Back to Booking</button>
+        <!-- Add your payment form fields here -->
+    </div>
+
+
+    <!-- Confirmation Page (Initially Hidden) -->
+    <div id="confirmationPage" class="hidden">
+        <div class="container confirm-main">
+            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></li>
+            <h2>Confirm Message</h2>
+            Your Request has been sent to our employee <br>
+            You Will get a confirmation notification soon</p>
+
+            <div class="spinner-border text-secondary mt-4" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+
+
+            <h4>Please Wait</h4>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href="index.html"><button class="confirmpage">HomePage
+                                <i class="fa fa-home" aria-hidden="true"></i></li>
+
+                            </button></a>
+
+                        <a href="index.html#ourbus-id"> <button class="confirmpage1">View Our Bus
+                                <i class="fa fa-bus" aria-hidden="true"></i></li>
+
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        //Js Country code number
+        const submitButton = document.getElementById("submitButton");
+
+        submitButton.addEventListener("click", () => {
+            const countryCode = document.getElementById("countryCode").value;
+            const phoneNumber = document.getElementById("phoneNumber").value;
+
+            // You can use countryCode and phoneNumber as needed, e.g., for form submission
+            console.log("Country Code: " + countryCode);
+            console.log("Phone Number: " + phoneNumber);
+        });
+    </script>
+
+
+
+    <script>
+
+        // JavaScript to toggle between forms
+        const bookingForm = document.getElementById("bookingForm");
+        const paymentForm = document.getElementById("paymentForm");
+        const confirmationPage = document.getElementById("confirmationPage");
+        const busIcon = document.getElementById("busIcon");
+        const tickIcon = document.getElementById("tickIcon");
+        const tickIcon2 = document.getElementById("tickIcon2");
+
+        const paymentBackButton = document.getElementById("paymentBackButton");
+        const confirmBackButton = document.getElementById("confirmBackButton");
+        const line = document.querySelector(".line");
+
+
+
+
+        const bookingbutton = document.getElementById("bookingbutton");
+        const paymentButton = document.getElementById("paymentButton");
+        const confirmationButton = document.getElementById("confirmationButton");
+
+        function moveBusIcon(leftPosition) {
+            busIcon.style.left = leftPosition + "%"; // Move the bus icon to the specified position
+        }
+        bookingForm.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent the default form submission
+            bookingForm.classList.add("hidden");
+            paymentForm.classList.remove("hidden");
+            confirmationPage.classList.add("hidden");
+
+            moveBusIcon(49); // Move the bus icon to 33.33% (Payment section)
+            tickIcon.classList.remove("hidden"); // Show the tick icon
+
+        });
+
+        function goBackToBooking() {
+            bookingForm.classList.remove("hidden");
+            paymentForm.classList.add("hidden");
+            confirmationPage.classList.add("hidden");
+            moveBusIcon(22); // Move the bus icon back to 22% (Booking section)
+            tickIcon.classList.add("hidden"); // Hide the tick icon when going back to the booking form
+            tickIcon2.classList.add("hidden"); // Hide the tick icon in the payment section
+
+        }
+        paymentForm.addEventListener("submit", (event) => {
+            event.preventDefault(); // Prevent the default form submission
+            paymentForm.classList.add("hidden");
+            confirmationPage.classList.remove("hidden");
+
+            moveBusIcon(75);
+            tickIcon2.classList.remove("hidden"); // Show the tick icon in the payment section
+        });
+
+        confirmationButton.addEventListener("click", () => {
+
+            paymentForm.classList.add("hidden");
+            bookingForm.classList.add("hidden");
+            confirmationPage.classList.remove("hidden");
+            moveBusIcon(66.66); // Move the bus icon to 66.66% (Confirmation section)
+            tickIcon.classList.remove("hidden"); // Show the tick icon in the confirmation section
+            tickIcon2.classList.remove("hidden"); // Show the tick icon in the confirmation section
+
+        });
+        /*  function goBackToBooking() {
+             paymentForm.classList.add("hidden");
+             confirmationPage.classList.add("hidden"); // Hide the confirmation page
+             bookingForm.classList.remove("hidden"); // Show the booking form
+             moveBusIcon(22); // Move the bus icon back to 22% (Booking section)
+             tickIcon.classList.add("hidden"); // Hide the tick icon when going back to the booking form
+             tickIcon2.classList.add("hidden"); // Hide the tick icon in the payment section
+         } */
+
+
+        /*  paymentBackButton.addEventListener("click", (event) => {
+             event.preventDefault(); // Prevent the default form submission
+
+             paymentForm.classList.add("hidden");
+             confirmationPage.classList.add("hidden"); // Hide the confirmation page
+
+             bookingForm.classList.remove("hidden"); // Show the booking form
+
+             moveBusIcon(22); // Move the bus icon back to 22% (Booking section)
+             tickIcon.classList.add("hidden"); // Hide the tick icon when going back to the booking form
+             tickIcon2.classList.add("hidden"); // Hide the tick icon in the payment section
+         }); */
+
+        confirmBackButton.addEventListener("click", () => {
+            paymentForm.classList.remove("hidden");
+            confirmationPage.classList.add("hidden");
+
+
+
+        });
+
+        /* moveBusIcon(33.33); // Move the bus icon back to 33.33% (Payment section)
+        tickIcon.classList.add("hidden"); // Hide the tick icon when going back */
+
+
+
+    </script>
+
+
+
+
+    <!-- MINE -->
+    <script src="js/all.js"></script>
+    <!--     <script src="js/bootstrap.min.js"></script>
+     -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

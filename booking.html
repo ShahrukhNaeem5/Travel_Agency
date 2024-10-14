@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Modernizer -->
+  <script src="js/modernizer.js"></script>
+
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+
+  <title>Bus Seat Booking</title>
+
+</head>
+
+<body style="background-color: rgb(235, 235, 235)">
+  <div id="site-header">
+    <header id="header" class="header-block-top">
+      <div class="container">
+        <div class="row">
+          <div class="main-menu">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+              <div class="container">
+                  <a class="navbar-brand" href="#">
+                      <img src="images/Azaab.png" alt="Logo" width="180px" height="50px">
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+                      aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbar">
+                      <ul class="navbar-nav ms-auto">
+                          <li class="nav-item llli">
+                              <a class="nav-link" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item llli">
+                              <a class="nav-link" href="About_us.html">About us</a>
+                          </li>
+                          <li class="nav-item llli">
+                              <a class="nav-link" href="Contact-us.html">Contact us</a>
+                          </li>
+                          <li class="nav-item llli">
+                            <a class="nav-link" href="index.html#ourbus-id">
+                              Our Buses
+                         </a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" href="Login-Register.html">
+                                  <button class="btn login-btn">LOGIN &nbsp;
+                                      <i class="fa fa-user" aria-hidden="true"></i>
+                                  </button>
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+
+            <!-- end navbar -->
+          </div>
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container-fluid -->
+    </header>
+    <!-- end header -->
+  </div>
+  <!-- end site-header -->
+
+  <div class="container-fluid back-icon">
+    <div>
+      <a href="bus_search.html"><img class="icon-image" src="images/backIcon.png" alt="" /></a>
+    </div>
+
+    <div>
+      <h4>Bus Seat Select</h4>
+    </div>
+  </div>
+  <div class="container-fluid pt-4">
+    <h3>Travellers ISO 9002- 2009 Certified</h3>
+    <div class="container-fluid big-box">
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="offerbus">Wifi</span><br /><span class="thing">Acces In The Bus</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-6">
+            <p>
+              <span class="offerbus">AC</span><br /><span class="thing">Ac Is Available</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- 2nd -->
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            <span class="offerbus">Safety Features</span>
+            <br />
+            <span class="thing"> Sanitized, Masks</span>
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="col-md-6">
+            <p>
+              <span class="offerbus"> Essentials</span><br /><span class="thing">Pillow, Water</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="container-fluid divs">
+    <h4>Select your Seat</h4>
+
+    <div class="container-fluid seatdiv text-center">
+      <div>
+        <img src="images/sold-seat -icon.png" class="seatimg" alt="" />
+        <h6>Sold Out</h6>
+      </div>
+      <div>
+        <img src="images/available-seat -icon.png" class="seatimg" alt="" />
+        <h6>Available</h6>
+      </div>
+      <div>
+        <img src="images/selected-seat -icon.png" class="seatimg" alt="" />
+        <h6>Selected</h6>
+      </div>
+    </div>
+
+    <div class="container-fluid bus-bg-seat">
+      <div class="container">
+        
+        <div class="row no-gutters text-center">
+          <div class="col  col-md-12">
+            <div class="booked-seat">
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+            </div>
+          </div>
+          <div class="col col-md-12">
+            <div class="booked-seat">
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <div class="row no-gutters text-center">
+          <div class="col col-md-12">
+            <div class="booked-seat">
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+            </div>
+          </div>
+          <div class="col col-md-12">
+            <div class="booked-seat">
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+              <img id="image1" src="images/available-seat.png" alt="Available Seat" onclick="toggleImage(this)" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid text-center pt-5">
+        <a href="Payment_Confirm.html"><button class="booked-btn">Continue</button></a>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!--  -->
+
+  <div class="container imagebook pb-5">
+    <div class="container imagebook-heading">
+      <div class="row">
+        <div class="col-md-12">
+          <h5>Destination</h5>
+          <h2>Favourite Destinations</h2>
+        </div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 img-con">
+        <img src="images/karachi-image2.jpg" class="zoom-img" alt="zoomin-img">
+        <div class="img-text">
+          <h6>Karachi</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, eaque.</p>
+          <button class="btn">Book Destination</button>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 img-con">
+        <img src="images/lahore-image2.png" alt="">
+        <div class="img-text">
+          <h6>Lahore</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, eaque.</p>
+          <button class="btn">Book Destination</button>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 img-con">
+        <img src="images/islamabad-image3.png" alt="">
+        <div class="img-text">
+          <h6>Islambad</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, eaque.</p>
+          <button class="btn">Book Destination</button>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6 img-con">
+        <img src="images/peshaawar.png" alt="">
+        <div class="img-text">
+          <h6>Peshawar</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, eaque.</p>
+          <button class="btn">Book Destination</button>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <!--  -->
+  <!-- Footer -->
+  <div class="container-fluid footer-div">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="footer-logo">
+          <img class="footer-logo-img" src="images/logo1.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. psum dolor sit amet consectetur
+            adipisicing eli psum dolor sit amet consectetur adipisicing eli Accusamus, ea?</p>
+          <span class="followus">Follow Us :</span>
+          <a href=""><i class="fa fa-facebook" style="color: rgb(255, 153, 0);" aria-hidden="true"></i>
+            </li>
+          </a>
+          <a href=""><i class="fa fa-instagram" style="color: rgb(255, 153, 0);" aria-hidden="true"></i>
+            </li>
+          </a>
+          <a href=""><i class="fa fa-twitter" style="color: rgb(255, 153, 0);" aria-hidden="true"></i>
+            </li>
+          </a>
+          <a href=""> <i class="fa fa-youtube" style="color: rgb(255, 153, 0);" aria-hidden="true"></i>
+            </li>
+          </a>
+
+        </div>
+      </div>
+      <div class="col-md-3">
+        <h3>Pages</h3>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Contact Us</a></li>
+          <li><a href="">About Us</a></li>
+          <li><a href="">Services</a></li>
+
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="">Booking</a></li>
+          <li><a href="">Bus Info</a></li>
+          <li><a href="">Enquiry</a></li>
+          <li><a href="">Services</a></li>
+
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h3>Booking Timimg</h3>
+        <ul>
+          <li>Mon to Sunday</li>
+          <li> 7am to 12am</li>
+          <li>Friday </li>
+          <li>7am to 1pm</li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid copyright">
+      <h6>Copyright &...... 2023.All rights reserved by Us</h6>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    const seats = document.querySelectorAll(".seat");
+
+    seats.forEach((seat) => {
+      seat.addEventListener("click", () => {
+        seat.classList.toggle("selected");
+      });
+    });
+  </script>
+
+  <!-- SEAT SELECT -->
+
+  <script>
+    // Function to set initial border colors based on seat status
+    function setInitialBorders() {
+      const images = document.querySelectorAll(".image-container img");
+      images.forEach((image) => {
+        if (image.src.includes("available-seat.png")) {
+          image.style.border = "1px solid grey"; // Set border color to grey for available seat
+        } else if (image.src.includes("sold-seat.png")) {
+          image.style.border = "1px solid red"; // Set border color to red for sold seat
+        }
+      });
+    }
+
+    // Call the function to set initial borders when the page loads
+    setInitialBorders();
+
+    function toggleImage(image) {
+      const selectedImageSrc = image.src;
+
+      if (selectedImageSrc.includes("available-seat.png")) {
+        image.src = "images/selected-seat.png";
+        image.style.border = "2px solid green"; // Set border color to green for selected seat
+      } else if (selectedImageSrc.includes("selected-seat.png")) {
+        image.src = "images/available-seat.png";
+        image.style.border = "1px solid black"; // Set border color to grey for available seat
+      }
+    }
+  </script>
+</body>
+
+</html>
